@@ -32,4 +32,4 @@ This analysis is correlational and cross-sectional.
 No causal claims are made.
 
 ## Notebook
-See `analysis.ipynb` for full code and results.
+See `Corruption_Index.ipynb` for full code and results.
