@@ -2,7 +2,7 @@
 ### A Data-Driven Study of Independence, Wealth, and Governance Quality
 
 ## Overview
-A widely held assumption in political economy is that *newer countries* tend to be more corrupt because they have had less time to develop strong institutions.  
+A common intuition is that countries with shorter post-independence histories may face greater challenges in building effective institutions.
 This project empirically tests that assumption using global corruption, governance, and economic data.
 
 Rather than optimizing for prediction, the focus is on **hypothesis testing, feature relevance, and interpretability** — following the data even when it contradicts intuition.
