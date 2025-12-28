@@ -100,32 +100,60 @@ However:
 
 ## Governance Performance Beyond Economic Capacity
 
-### Residual Analysis
+Governance Performance Beyond Economic Capacity
+
 To examine governance variation unexplained by income, a linear regression model is estimated:
 
-`CPI ~ log(GDP)`
+CPI ~ log(GDP)
 
-The residuals from this model represent deviations from the governance level expected given a country’s economic capacity:
 
-- **Positive residuals** → stronger governance than GDP predicts  
-- **Negative residuals** → weaker governance than GDP predicts  
+The residuals from this model represent deviations from the corruption level expected given a country’s economic capacity.
 
----
+Positive residuals → stronger governance than GDP predicts
 
-### Overperforming Countries
-These countries exhibit significantly better governance outcomes than predicted by their level of economic development, suggesting comparatively strong institutions and accountability mechanisms despite limited economic capacity.
+Negative residuals → weaker governance than GDP predicts
 
-Examples include countries that outperform regional and income-level peers on corruption measures.
+Residuals are interpreted as relative performance, not causal effects.
 
----
+Overperforming Countries
 
-### Underperforming Countries
-These countries exhibit weaker governance outcomes than predicted by GDP, indicating institutional weaknesses despite economic capacity.
+(Higher CPI than Expected Given GDP)
 
-Common characteristics among underperformers include:
-- Resource-driven economies
-- Weak accountability structures
-- Political or institutional instability
+These countries exhibit substantially better governance outcomes than predicted by their level of economic development, suggesting comparatively strong institutional effectiveness relative to economic capacity.
+
+Country	CPI 2024	Predicted CPI	Residual
+Bhutan	72	36.79	+35.21
+Rwanda	57	23.25	+33.75
+Finland	88	63.18	+24.82
+Denmark	90	66.12	+23.88
+Uruguay	76	54.77	+21.23
+New Zealand	83	62.30	+20.70
+Burkina Faso	41	22.79	+18.21
+Estonia	76	57.84	+18.16
+Benin	45	26.95	+18.05
+Malawi	34	16.06	+17.94
+
+These cases highlight that strong governance outcomes are achievable even at lower or mid-range income levels.
+
+Underperforming Countries
+
+(Lower CPI than Expected Given GDP)
+
+These countries exhibit weaker governance outcomes than predicted by GDP, indicating institutional challenges relative to economic capacity.
+
+Country	CPI 2024	Predicted CPI	Residual
+Equatorial Guinea	13	44.04	−31.04
+Turkmenistan	17	46.66	−29.66
+Libya	13	42.64	−29.64
+Venezuela	10	38.20	−28.20
+Mexico	26	49.69	−23.69
+Azerbaijan	22	43.01	−21.01
+Panama	33	52.85	−19.85
+Nicaragua	14	33.54	−19.54
+Guyana	39	57.69	−18.69
+Gabon	27	45.48	−18.48
+
+A recurring pattern among underperformers includes reliance on resource rents, weak accountability mechanisms, or institutional instability.
 
 ---
 
