@@ -88,9 +88,7 @@ However:
 ### 4. Residual Analysis Reveals Governance Efficiency
 Residuals from the model:
 
-\[
-\text{CPI} \sim \log(\text{GDP})
-\]
+CPI ~ log(GDP)
 
 highlight:
 - **Overperforming countries** with stronger governance than GDP predicts
