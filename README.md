@@ -2,8 +2,7 @@
 ### A Data-Driven Study of Independence, Wealth, and Governance Quality
 
 ## Overview
-A common intuition is that countries with shorter post-independence histories may face greater challenges in building effective institutions.
-This project empirically tests that assumption using global corruption, governance, and economic data.
+This project examines whether years since independence provide meaningful explanatory power for corruption outcomes when compared with economic and institutional factors.
 
 Rather than optimizing for prediction, the focus is on **hypothesis testing, feature relevance, and interpretability** — following the data even when it contradicts intuition.
 
@@ -50,7 +49,7 @@ The analysis proceeds in structured stages:
    - Relationship between GDP, country age, and governance outcomes
 
 4. **Regression & residual analysis**  
-   - Linear regression model: [ CPI ~ log(GDP) ]
+   - Model specification: `CPI ~ log(GDP)`
    - Residuals interpreted as *governance performance beyond economic capacity*
 
 ---
@@ -67,7 +66,21 @@ Across all corruption and governance indices:
 
 ---
 
-### 2. Regional Effects Dominate Country Age
+### 2. Governance Indicators Are Internally Consistent, Country Age Is Not
+A correlation heatmap of all numerical indicators shows:
+
+- Strong correlations among corruption and governance indices (≈ 0.75–0.95)
+- Consistently weak correlation between **years since independence** and all governance measures
+
+This confirms that:
+- The indices capture a common latent concept of governance quality
+- Country age contributes little independent explanatory signal
+
+*(See correlation heatmap in the notebook for details.)*
+
+---
+
+### 3. Regional Effects Dominate Country Age
 Governance outcomes cluster strongly by region:
 - Countries of similar age often exhibit vastly different corruption levels
 - Shared historical and institutional contexts explain far more variance than elapsed time
@@ -76,7 +89,7 @@ This indicates that **institutional trajectories matter more than chronology**.
 
 ---
 
-### 3. GDP Is Strongly Associated with Governance Quality
+### 4. GDP Is Strongly Associated with Governance Quality
 GDP (log-transformed) shows **strong correlation** with corruption and governance measures across all indices.
 
 However:
@@ -85,16 +98,34 @@ However:
 
 ---
 
-### 4. Residual Analysis Reveals Governance Efficiency
-Residuals from the model:
+## Governance Performance Beyond Economic Capacity
 
-CPI ~ log(GDP)
+### Residual Analysis
+To examine governance variation unexplained by income, a linear regression model is estimated:
 
-highlight:
-- **Overperforming countries** with stronger governance than GDP predicts
-- **Underperforming countries** with weak institutions despite economic capacity
+`CPI ~ log(GDP)`
 
-These residuals capture **institutional effectiveness beyond wealth**.
+The residuals from this model represent deviations from the governance level expected given a country’s economic capacity:
+
+- **Positive residuals** → stronger governance than GDP predicts  
+- **Negative residuals** → weaker governance than GDP predicts  
+
+---
+
+### Overperforming Countries
+These countries exhibit significantly better governance outcomes than predicted by their level of economic development, suggesting comparatively strong institutions and accountability mechanisms despite limited economic capacity.
+
+Examples include countries that outperform regional and income-level peers on corruption measures.
+
+---
+
+### Underperforming Countries
+These countries exhibit weaker governance outcomes than predicted by GDP, indicating institutional weaknesses despite economic capacity.
+
+Common characteristics among underperformers include:
+- Resource-driven economies
+- Weak accountability structures
+- Political or institutional instability
 
 ---
 
@@ -119,9 +150,9 @@ Residuals are interpreted as *relative performance*, not causal effects.
 ---
 
 ## Repository Structure
-- `Corruption_Index.ipynb` — full exploratory analysis, modeling, and visualizations
-- `data/` — cleaned datasets used in the study
-- `README.md` — project summary and findings
+- `Corruption_Index.ipynb` — full exploratory analysis, modeling, visualizations, and heatmaps  
+- `data/` — cleaned datasets used in the study  
+- `README.md` — project summary and findings  
 
 ---
 
