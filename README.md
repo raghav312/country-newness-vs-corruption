@@ -50,10 +50,7 @@ The analysis proceeds in structured stages:
    - Relationship between GDP, country age, and governance outcomes
 
 4. **Regression & residual analysis**  
-   - Linear regression model:
-     \[
-     \text{CPI} \sim \log(\text{GDP})
-     \]
+   - Linear regression model: [ CPI ~ log(GDP) ]
    - Residuals interpreted as *governance performance beyond economic capacity*
 
 ---
