@@ -124,7 +124,7 @@ Residuals are interpreted as *relative performance*, not causal effects.
 ---
 
 ## Repository Structure
-- `analysis.ipynb` — full exploratory analysis, modeling, and visualizations
+- `Corruption_Index.ipynb` — full exploratory analysis, modeling, and visualizations
 - `data/` — cleaned datasets used in the study
 - `README.md` — project summary and findings
 
